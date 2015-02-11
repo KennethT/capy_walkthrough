@@ -36,7 +36,6 @@ class PlayersController < ApplicationController
   private
 
   def player_params
-    binding.pry
     params.require(:player).permit(:name).merge(team_id: params[:team_id])
   end
 
